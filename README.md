@@ -1,2 +1,2 @@
-# mslearn-ai-language.es-es
-Spanish repo
+# mslearn-ai-language
+Archivos de laboratorio para módulos de lenguaje de Azure AI
