@@ -57,12 +57,12 @@ Ahora tiene todo listo para volver a establecer un proyecto de reconocimiento de
 
     - **Directorio de Azure**: directorio de Azure que contiene la suscripción.
     - **Suscripción de Azure**: su suscripción a Azure.
-    - **Tipo de recurso:** lenguaje.
-    - **Recurso de lenguaje**: el recurso de Lenguaje de Azure AI que has creado antes.
+    - **Tipo de recurso**: idioma.
+    - **Recurso de lenguaje**: el recurso de Lenguaje de Azure AI que creó antes.
 
     Si <u>no</u> se le pide que elija un recurso de Language, puede deberse a que tiene varios recursos de Language en la suscripción, en cuyo caso:
 
-    1. En la barra de la parte superior de la página, selecciona el botón **Configuración (⚙)**.
+    1. En la barra de la parte superior de la página, seleccione el botón **Configuración (&#9881;)**.
     2. En la página **Configuración,** vea la pestaña **Recursos**.
     3. Seleccione el recurso de Language que acaba de crear y haga clic en **Switch resource** (Cambiar recurso).
     4. En la parte superior de la página, haga clic en **Language Studio** para volver a la página principal de Language Studio.
@@ -147,7 +147,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 1. En Visual Studio Code, en el panel **Explorador**, vaya a la carpeta **Labfiles/05-custom-entity-recognition** y expanda la carpeta **CSharp** o **Python** según sus preferencias de lenguaje y la carpeta **custom-entities** que contiene. Cada carpeta contiene los archivos específicos del lenguaje de una aplicación en la que va a integrar la funcionalidad de clasificación de Lenguaje de Azure AI.
 1. Haga clic con el botón derecho en la carpeta **custom-entities** que contiene sus archivos de código y abra un terminal integrado. Después, instale el paquete del SDK de Text Analytics de Lenguaje de Azure AI mediante la ejecución del comando adecuado para sus preferencias de lenguaje:
 
-    **C#:**
+    **C#**:
 
     ```
     dotnet add package Azure.AI.TextAnalytics --version 5.3.0
@@ -161,7 +161,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 1. En el panel **Explorador**, en la carpeta **custom-entities**, abra el archivo de configuración para su lenguaje preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
     
 1. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que ha creado (disponible en la página **Claves y punto de conexión** de su recurso de Lenguaje de Azure AI en Azure Portal). El archivo ya debe contener los nombres de proyecto e implementación del modelo de extracción de entidades personalizados.
@@ -174,7 +174,7 @@ Ahora tiene todo listo para usar el servicio de Lenguaje de Azure AI para extrae
 1. Expanda la carpeta **ads** en la carpeta **custom-entities** para ver los anuncios clasificados que analizará la aplicación.
 1. En la carpeta **custom-entities**, abra el archivo de código para la aplicación cliente:
 
-    - **C#** : Program.cs
+    - **C#**: Program.cs
     - **Python**: custom-entities.py
 
 1. Busque el comentario **Importar espacios de nombres**. A continuación, en este comentario, agregue el siguiente código específico del lenguaje para importar los espacios de nombres que necesitará para usar el SDK de Text Analytics:
@@ -214,10 +214,10 @@ Ahora tiene todo listo para usar el servicio de Lenguaje de Azure AI para extrae
     ai_client = TextAnalyticsClient(endpoint=ai_endpoint, credential=credential)
     ```
 
-1. En la función **Main**, tenga en cuenta que el código existente lee todos los archivos de la carpeta **articles** y crea una lista que contiene su contenido. En el caso del código de C#, se usa una lista de objetos **TextDocumentInput** para incluir el nombre de archivo como identificador y el idioma. En Python se usa una lista sencilla del contenido del texto.
+1. en la función **Principal**, tenga en cuenta que el código existente lee todos los archivos de la carpeta **anuncios** y crea una lista que contiene su contenido. En el caso del código de C#, se usa una lista de objetos **TextDocumentInput** para incluir el nombre de archivo como identificador y el idioma. En Python se usa una lista sencilla del contenido del texto.
 1. Busque el comentario **Extraer entidades** y agregue el código siguiente:
 
-    **C#** : Program.cs
+    **C#**: Program.cs
 
     ```csharp
     // Extract entities
@@ -292,13 +292,13 @@ La aplicación ya se puede probar.
 
 1. En el terminal integrado de la carpeta **classify-text**, escriba el siguiente comando para ejecutar el programa:
 
-    - **C#** : `dotnet run`
+    - **C#**: `dotnet run`
     - **Python**: `python custom-entities.py`
 
     > **Sugerencia**: Puede usar el icono **Maximizar el tamaño del panel** (**^**) en la barra de herramientas del terminal para ver más del texto de la consola.
 
 1. Observe la salida. La aplicación debe enumerar los detalles de las entidades que se encuentran en cada archivo de texto.
 
-## Limpieza
+## Limpiar
 
 Cuando ya no necesite el proyecto, puede eliminarlo desde la página de **proyectos** en Language Studio. También puede quitar el servicio de Lenguaje de Azure AI y la cuenta de almacenamiento asociada en [Azure Portal](https://portal.azure.com).
