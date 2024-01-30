@@ -54,7 +54,7 @@ Si quiere crear una knowledge base para responder a preguntas en el recurso de L
     4. En la parte superior de la página, haga clic en **Language Studio** para volver a la página principal de Language Studio.
 
 1. En la parte superior del portal, en el menú **Crear nuevo**, seleccione **Respuesta a preguntas personalizada**.
-1. En el asistente para ***crear un proyecto**, en la página **Elegir configuración de idioma**, seleccione la opción para **establecer el idioma de todos los proyectos de este recurso** y seleccione **Inglés** como idioma. Seleccione **Siguiente**.
+1. En el asistente para ***crear un proyecto**, en la página **Elegir configuración de idioma**, seleccione la opción para **establecer el idioma de todos los proyectos de este recurso** y seleccione **Inglés** como idioma. Luego, seleccione **Siguiente**.
 1. En la página **Escribir información básica**, escriba los siguientes detalles:
     - **Nombre** `LearnFAQ`
     - **Descripción**: `FAQ for Microsoft Learn`
@@ -81,7 +81,7 @@ La knowledge base se ha rellenado con pares de preguntas y respuestas de las pre
     - **Pregunta**: `What are Microsoft credentials?`
     - **Respuesta**: `Microsoft credentials enable you to validate and prove your skills with Microsoft technologies.`
 1. Seleccione **Listo**.
-1. En la página de la pregunta **¿Qué es la certificación de Microsoft?** que se crea, expanda **Preguntas alternativas**. A continuación, agregue la pregunta alternativa `How can I demonstrate my Microsoft technology skills?`.
+1. En la página de la pregunta **¿Qué son las credenciales de Microsoft?** que se crea, expanda **Preguntas alternativas**. A continuación, agregue la pregunta alternativa `How can I demonstrate my Microsoft technology skills?`.
 
     En algunos casos, tiene sentido permitir que el usuario realice un seguimiento de la respuesta mediante la creación de una conversación *multiturno* que permita al usuario refinar iterativamente la pregunta para llegar a la respuesta que necesita.
 
@@ -119,7 +119,7 @@ La knowledge base proporciona un servicio back-end que las aplicaciones cliente 
 
 Desarrollará la aplicación de respuesta a preguntas mediante Visual Studio Code. Los archivos de código de la aplicación se han proporcionado en un repositorio de GitHub.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 2. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -149,7 +149,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 3. En el panel **Explorador**, en la carpeta **qna-app**, abra el archivo de configuración para su lenguaje preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
     
 4. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que creó (disponible en la página **Claves y punto de conexión** del recurso de Lenguaje de Azure AI en Azure Portal). El nombre del proyecto y el nombre de implementación de la knowledge base también deben estar en este archivo.
@@ -253,10 +253,10 @@ Ahora está listo para agregar el código necesario para importar las biblioteca
 
 ## Limpieza de recursos
 
-Si ha terminado de explorar Lenguaje de Azure AI puede eliminar el grupo de recursos que creó en este ejercicio. A continuación, se indica cómo puede hacerlo.
+Sugerencia: Si ha terminado de explorar el servicio Lenguaje de Azure AI, puede eliminar los recursos que creó en este ejercicio. A continuación, se indica cómo puede hacerlo.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
-2. Navegue hasta el recurso de Lenguaje de Azure AI que creó en este laboratorio.
+2. Vaya al recurso de Lenguaje de Azure AI que creó en este laboratorio.
 3. En la página del recurso, seleccione **Eliminar** y siga las instrucciones para eliminar el recurso.
 
 ## Más información
