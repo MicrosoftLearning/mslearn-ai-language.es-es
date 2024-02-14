@@ -29,7 +29,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del **T
 
 Desarrollará la aplicación de traducción de texto mediante Visual Studio Code. Los archivos de código de la aplicación se han proporcionado en un repositorio de GitHub.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 2. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -135,7 +135,7 @@ Ahora está listo para usar el Traductor de Azure AI para traducir texto.
         }
         else
         {
-            Console.WriteLine($"({targetLanguage} is not a supported language.");
+            Console.WriteLine($"{targetLanguage} is not a supported language.");
         }
 
     }
@@ -169,7 +169,8 @@ Ahora está listo para usar el Traductor de Azure AI para traducir texto.
     while (inputText.ToLower() != "quit")
     {
         Console.WriteLine("Enter text to translate ('quit' to exit)");
-        inputText = Console.ReadLine();if (inputText.ToLower() != "quit")
+        inputText = Console.ReadLine();
+        if (inputText.ToLower() != "quit")
         {
             Response<IReadOnlyList<TranslatedTextItem>> translationResponse = await client.TranslateAsync(targetLanguage, inputText).ConfigureAwait(false);
             IReadOnlyList<TranslatedTextItem> translations = translationResponse.Value;
@@ -214,6 +215,6 @@ La aplicación ya se puede probar.
 1. Escriba una frase para traducir (por ejemplo, `This is a test` , o `C'est un test`) y vea los resultados, que deben detectar el idioma de origen y traducir el texto al idioma de destino.
 1. Cuando haya terminado, escriba `quit`. Puede volver a ejecutar la aplicación y elegir otro idioma de destino.
 
-## Limpieza
+## Limpiar
 
 Cuando ya no necesite el proyecto, puede eliminar el recurso del Traductor de Azure AI en el [Azure Portal](https://portal.azure.com).

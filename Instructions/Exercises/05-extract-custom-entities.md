@@ -69,7 +69,7 @@ Ahora tiene todo listo para volver a establecer un proyecto de reconocimiento de
 
 1. En la parte superior del portal, en el menú **Crear nuevo**, seleccione *Reconocimiento de entidades con nombre personalizadas**.
 
-1. Cree un nuevo proyecto con la siguiente configuración:
+1. Cree un proyecto con la siguiente configuración:
     - **Conectar almacenamiento**: *es probable que este valor ya esté rellenado. Cámbielo a su cuenta de almacenamiento si no se ha cambiado todavía*
     - **Información básica:**
     - **Nombre**: `CustomEntityLab`
