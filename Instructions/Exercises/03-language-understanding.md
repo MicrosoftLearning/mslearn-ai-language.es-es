@@ -20,17 +20,17 @@ Este tipo de entrada es un ejemplo de una *expresión* (algo que un usuario podr
 
 ## Aprovisionar un recurso de *Lenguaje de Azure AI*
 
-Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del **servicio de Lenguaje de Azure AI** en su suscripción de Azure.
+Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del servicio de **Lenguaje de Azure AI** en su suscripción de Azure.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
 1. En el campo de búsqueda de la parte superior, busque **Servicios de Azure AI**. A continuación, en los resultados, seleccione **Crear** bajo **Servicio de lenguaje**.
 1. Seleccione **Continuar para crear el recurso**.
-1. Aprovisione el recurso con la siguiente configuración:
+1. Aprovisione el recurso mediante la siguiente configuración:
     - **Suscripción**: *su suscripción a Azure*.
-    - **Grupo de recursos**: *elija o cree un grupo de recursos*.
+    - **Grupo de recursos**: *seleccione o cree un grupo de recursos*.
     - **Región**: *elija cualquier región disponible*
     - **Nombre**: *escriba un nombre único*.
-    - **Plan de tarifa**: seleccione **F0** (*gratis*), o **S** (*estándar*) si F no está disponible.
+    - **Plan de tarifa**: seleccione **F0** (*gratis*) o **S** (*estándar*) si F no está disponible.
     - **Aviso de IA responsable**: Aceptar.
 1. Seleccione **Revisar + crear**.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
@@ -111,7 +111,7 @@ Ahora que ha agregado algunas intenciones, vamos a entrenar el modelo de lenguaj
 
 1. En el panel de la izquierda, seleccione **Trabajos de entrenamiento**. Luego, seleccione **+ Iniciar un trabajo de entrenamiento**.
 
-1. En el cuadro de diálogo **Iniciar un trabajo de entrenamiento**, seleccione la opción para entrenar un modelo nuevo y llámelo "Reloj". Seleccione el modo **Entrenamiento estándar** y las opciones de **división de datos** predeterminadas.
+1. En el cuadro de diálogo **Iniciar un trabajo de entrenamiento**, seleccione la opción para entrenar un nuevo modelo y asígnele el nombre `Clock`. Seleccione el modo **Entrenamiento estándar** y las opciones de **división de datos** predeterminadas.
 
 1. Para comenzar el proceso de entrenamiento del modelo, seleccione **Entrenar**.
 
@@ -296,7 +296,7 @@ En un proyecto real, refinaría de forma iterativa las intenciones y las entidad
 
 Desarrollará la aplicación Language Understanding mediante Visual Studio Code. Los archivos de código de la aplicación se han proporcionado en un repositorio de GitHub.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 2. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -326,7 +326,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 3. En el panel **Explorador**, en la carpeta **clock-client**, abra el archivo de configuración para su lenguaje preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
     
 4. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que creó (disponible en la página **Claves y punto de conexión** del recurso de Lenguaje de Azure AI en Azure Portal)
@@ -609,10 +609,10 @@ Ahora está listo para agregar el código necesario para importar las biblioteca
 
 ## Limpieza de recursos
 
-Si ha terminado de explorar Lenguaje de Azure AI puede eliminar el grupo de recursos que creó en este ejercicio. A continuación, se indica cómo puede hacerlo.
+Sugerencia: Si ha terminado de explorar el servicio Lenguaje de Azure AI, puede eliminar los recursos que creó en este ejercicio. A continuación, se indica cómo puede hacerlo.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
-2. Navegue hasta el recurso de Lenguaje de Azure AI que creó en este laboratorio.
+2. Vaya al recurso de Lenguaje de Azure AI que creó en este laboratorio.
 3. En la página del recurso, seleccione **Eliminar** y siga las instrucciones para eliminar el recurso.
 
 ## Más información
