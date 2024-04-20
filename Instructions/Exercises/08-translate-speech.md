@@ -23,7 +23,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso de **Vo
     - **Nombre**: *escriba un nombre único*
     - **Plan de tarifa**: seleccione **F0** (*gratis*), o **S** (*estándar*) si F no está disponible.
     - **Aviso de IA responsable**: Aceptar.
-1. Seleccione **Revisar + crear**.
+1. Seleccione **Revisar y crear** y, después, **Crear** para aprovisionar el recurso.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
 1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
 
@@ -31,7 +31,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso de **Vo
 
 Desarrollará la aplicación de voz mediante Visual Studio Code. Los archivos de código de la aplicación se han proporcionado en un repositorio de GitHub.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 1. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -61,7 +61,7 @@ Se han proporcionado aplicaciones para C# y Python. Las dos aplicaciones tienen 
 
 1. En el panel **Explorador**, en la carpeta **Traductor**, abra el archivo de configuración para su idioma preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
 
 1. Actualice los valores de configuración para incluir la **región** y una **clave** del recurso de Voz de Azure AI que creó (disponible en la página **Claves y punto de conexión** para el recurso de Voz de Azure AI en Azure Portal).
@@ -345,6 +345,6 @@ Hasta ahora, la aplicación traduce la entrada hablada en texto, lo que puede se
 > **NOTA**
 > *En este ejemplo, usó **SpeechTranslationConfig** para traducir la voz en texto, y luego usó **SpeechConfig** para sintetizar la traducción como voz. Puede usar **SpeechTranslationConfig** para sintetizar la traducción directamente, pero solo funciona cuando se traduce a un solo idioma y da como resultado una secuencia de audio que normalmente se guarda como un archivo en lugar de enviarse directamente a un altavoz.*
 
-## Más información
+## Información adicional
 
 Para obtener más información sobre el uso de la API Azure AI Speech Translation, consulte la [documentación de traducción de voz](https://learn.microsoft.com/azure/ai-services/speech-service/speech-translation).

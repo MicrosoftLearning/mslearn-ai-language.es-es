@@ -6,25 +6,25 @@ lab:
 
 # Análisis de texto
 
-El **Lenguaje de Azure** es compatible con el análisis de texto, que incluye la detección del idioma, el análisis de opinión, la extracción de frases clave y el reconocimiento de entidades.
+El **Lenguaje de Azure** admite el análisis de texto, que incluye la detección del idioma, el análisis de sentimiento, la extracción de frases clave y el reconocimiento de entidades.
 
-Por ejemplo, supongamos que una agencia de viajes quiere procesar las reseñas de hoteles que se han enviado al sitio web de la empresa. Mediante el Lenguaje de Azure AI, pueden determinar el idioma en el que se ha escrito cada reseña, su opinión (positiva, neutra o negativa), las frases clave que podrían indicar los temas principales que se tratan en ella y las entidades con nombre, como lugares, puntos de referencia o personas mencionadas en ellas.
+Por ejemplo, supongamos que una agencia de viajes quiere procesar las reseñas de hoteles que se han enviado al sitio web de la empresa. Mediante el Lenguaje de Azure AI, la agencia puede determinar el idioma en el que se ha escrito cada reseña, la opinión (positiva, neutra o negativa) de las reseñas, las frases clave que podrían indicar los temas principales que se tratan en la reseña y las entidades con nombre, como lugares, puntos de referencia o personas mencionadas en las reseñas.
 
 ## Aprovisionar un recurso de *Lenguaje de Azure AI*
 
 Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del servicio de **Lenguaje de Azure AI** en su suscripción de Azure.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
-1. En el campo de búsqueda de la parte superior, busca **Servicios de Azure AI**. Luego, en los resultados selecciona **Crear** en el recurso **Servicio de lenguaje**.
+1. En el campo de búsqueda de la parte superior, busque **Servicios de Azure AI**. A continuación, en los resultados, seleccione **Crear** bajo **Servicio de lenguaje**.
 1. Seleccione **Continuar para crear el recurso**.
 1. Aprovisione el recurso mediante la siguiente configuración:
     - **Suscripción**: *su suscripción a Azure*.
     - **Grupo de recursos**: *seleccione o cree un grupo de recursos*.
-    - **Región**: *elige cualquier región disponible*.
+    - **Región**: *elija cualquier región disponible*
     - **Nombre**: *escriba un nombre único*.
     - **Plan de tarifa**: seleccione **F0** (*gratis*) o **S** (*estándar*) si F no está disponible.
-    - **Aviso de IA responsable**: acepta.
-1. Seleccione **Revisar + crear**.
+    - **Aviso de IA responsable**: Aceptar.
+1. Seleccione **Revisar y crear** y **Crear** para aprovisionar el recurso.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
 1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
 
@@ -63,7 +63,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 3. En el panel **Explorador**, en la carpeta **text-analytics**, abra el archivo de configuración para su lenguaje preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
     
 4. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que ha creado (disponible en la página **Claves y punto de conexión** de su recurso de Lenguaje de Azure AI en Azure Portal)
@@ -92,7 +92,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
     from azure.ai.textanalytics import TextAnalyticsClient
     ```
 
-7. En la función **Principal**, observa que ya se ha proporcionado código para cargar la clave y el punto de conexión del servicio de Lenguaje de Azure AI desde el archivo de configuración. A continuación, busque el comentario **Create client using endpoint and key**(Crear cliente mediante el punto de conexión y la clave) y agregue el código siguiente para crear un cliente para Text Analysis API:
+7. En la función **Main (Principal)**, observe que ya se ha proporcionado código para cargar la clave y el punto de conexión de servicio de Lenguaje de Azure AI del archivo de configuración. A continuación, busque el comentario **Create client using endpoint and key**(Crear cliente mediante el punto de conexión y la clave) y agregue el código siguiente para crear un cliente para Text Analysis API:
 
     **C#**: Programs.cs
 
@@ -113,7 +113,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 8. Guarde los cambios y vuelva al terminal integrado de la carpeta **text-analysis** y escriba el siguiente comando para ejecutar el programa:
 
-    - **C#** : `dotnet run`
+    - **C#**: `dotnet run`
     - **Python**: `python text-analysis.py`
 
     > **Sugerencia**: Puede usar el icono **Maximizar el tamaño del panel** (**^**) en la barra de herramientas del terminal para ver más del texto de la consola.
@@ -122,7 +122,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 ## Agregar código para detectar el idioma
 
-Ahora que has creado un cliente para la API, vamos a usarlo para detectar el idioma en el que se escribe cada reseña.
+Ahora que ha creado un cliente para la API, vamos a usarlo para detectar el idioma en el que se escribe cada revisión.
 
 1. En la función **Main** del programa, busque el comentario **Get language** (Obtener idioma). A continuación, en este comentario, agregue el código necesario para detectar el idioma de cada documento de revisión:
 
@@ -205,7 +205,7 @@ Puede ser útil identificar frases clave en un cuerpo de texto para ayudar a det
     ```
 
 1. Guarde los cambios. Vuelva al terminal integrado de la carpeta **text-analysis** y vuelva a ejecutar el programa:
-1. Observe la salida y que cada documento contiene frases clave que proporcionan información sobre el tema de la revisión.
+1. Observe el resultado y que cada documento contiene frases clave que proporcionan información sobre el tema de la revisión.
 
 ## Agregar entidades para extraer datos
 
@@ -287,6 +287,6 @@ Sugerencia: Si ha terminado de explorar el servicio Lenguaje de Azure AI, puede 
 
 3. En la página del recurso, seleccione **Eliminar** y siga las instrucciones para eliminar el recurso.
 
-## Más información
+## Información adicional
 
-Para más información sobre el uso de **Lenguaje de Azure AI**, consulta la [Documentación](https://learn.microsoft.com/azure/ai-services/language-service/).
+Para más información sobre cómo usar **Lenguaje de Azure AI**, consulte la [documentación](https://learn.microsoft.com/azure/ai-services/language-service/).

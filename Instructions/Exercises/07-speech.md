@@ -28,7 +28,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso de **Vo
     - **Nombre**: *escriba un nombre único*
     - **Plan de tarifa**: seleccione **F0** (*gratis*), o **S** (*estándar*) si F no está disponible.
     - **Aviso de IA responsable**: Aceptar.
-1. Seleccione **Revisar + crear**.
+1. Seleccione **Revisar y crear** y **Crear** para aprovisionar el recurso.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
 1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
 
@@ -36,7 +36,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso de **Vo
 
 Desarrollará la aplicación de voz mediante Visual Studio Code. Los archivos de código de la aplicación se han proporcionado en un repositorio de GitHub.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 1. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -182,7 +182,7 @@ Ahora que tiene **SpeechConfig** para el servicio de voz en el recurso de Voz de
     **Python**
 
     ```
-    pip install playsound==1.3.0
+    pip install playsound==1.2.2
     ```
 
 1. En el archivo de código del programa, en las importaciones del espacio de nombres existente, agregue el código siguiente para importar la biblioteca que acaba de instalar:
@@ -448,6 +448,6 @@ El lenguaje de marcado de síntesis de voz (SSML) permite personalizar la forma 
 
 1. Cuando se le solicite, hable con claridad hacia el micrófono y diga "¿qué hora es?". El programa debe hablar con la voz especificada en el SSML (reemplazando a la voz especificada en SpeechConfig), indicando la hora y, después de una pausa, le indicará que es el momento de finalizar este laboratorio, que lo es.
 
-## Más información
+## Información adicional
 
 Para más información sobre el uso de las API de **conversión de voz en texto** y de **conversión de texto a voz**, consulte la [documentación de conversión de voz en texto](https://learn.microsoft.com/azure/ai-services/speech-service/index-speech-to-text) y la [documentación de conversión de texto a voz](https://learn.microsoft.com/azure/ai-services/speech-service/index-text-to-speech).
