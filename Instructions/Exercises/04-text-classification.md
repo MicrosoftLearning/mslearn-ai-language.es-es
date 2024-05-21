@@ -12,7 +12,7 @@ Para probar la clasificación de texto personalizado del servicio de Lenguaje de
 
 ## Aprovisionar un recurso de *Lenguaje de Azure AI*
 
-Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del **servicio de Lenguaje de Azure AI**. Además, use la clasificación de texto personalizado, debe habilitar la característica **Clasificación y extracción de texto personalizado**.
+Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del servicio **Lenguaje de Azure AI**. Además, use la clasificación de texto personalizada, debe habilitar la característica **Clasificación y extracción de texto personalizado**.
 
 1. En un explorador, abra Azure Portal en `https://portal.azure.com` e inicie sesión con su cuenta de Microsoft.
 1. Seleccione el campo de búsqueda en la parte superior del portal, busque `Azure AI services` y cree un recurso de **servicio de lenguaje.**
@@ -42,7 +42,7 @@ Una vez que haya creado el servicio de Lenguaje de Azure AI y la cuenta de alma
 
 1. En la cuenta de almacenamiento, seleccione **Configuración**, que se encuentra bajo **Configuración**. En la pantalla Configuración, habilite la opción **Permitir el acceso anónimo de blobs** y, a continuación, seleccione **Guardar**.
 
-1. Seleccione **Contenedores** en el menú de la izquierda, que se encuentra debajo de **Almacenamiento de datos**. En la pantalla que aparece, seleccione **+ Contenedor**. Denomine al contenedor `articles` y establezca el **Nivel de anónimo** en **Contenedor (acceso de lectura anónimo para contenedores y blobs)**.
+1. Seleccione **Contenedores** en el menú de la izquierda, que se encuentra debajo de **Almacenamiento de datos**. En la pantalla que aparece, seleccione **+ Contenedor**. Denomine al contenedor `articles` y establezca el **Nivel de acceso anónimo** en **Contenedor (acceso de lectura anónimo para contenedores y blobs)**.
 
     > **NOTA**: Al configurar una cuenta de almacenamiento para una solución real, tenga cuidado de asignar el nivel de acceso adecuado. Para más información sobre cada nivel de acceso, consulte la [documentación sobre Azure Storage](https://learn.microsoft.com/azure/storage/blobs/anonymous-read-access-configure).
 
@@ -71,7 +71,7 @@ Una vez completada la configuración, cree un proyecto de clasificación de text
 
 1. En la parte superior del portal, en el menú **Crear nuevo**, seleccione **Clasificación de texto personalizado**.
 1. Aparecerá la página **Conexión con el almacenamiento**. Todos los valores ya se habrán rellenado. Seleccione **Siguiente**.
-1. En la página **Seleccionar tipo de proyecto**, seleccione **Clasificación de etiqueta única**. Seleccione **Siguiente**.
+1. En la página **Seleccionar tipo de proyecto**, seleccione **Clasificación de etiqueta única**. Luego, seleccione **Siguiente**.
 1. En el panel **Escribir información básica**, establezca lo siguiente:
     - **Nombre**: `ClassifyLab`  
     - **Idioma principal del texto**: inglés (US)
@@ -79,7 +79,7 @@ Una vez completada la configuración, cree un proyecto de clasificación de text
 
 1. Seleccione **Siguiente**.
 1. En la página **Elegir contenedor**, establezca la lista desplegable **Contenedor del almacén de blobs** en el contenedor de *artículos*.
-1. Seleccione la opción **No, necesito etiquetar mis archivos como parte de este proyecto**. Seleccione **Siguiente**.
+1. Seleccione la opción **No, necesito etiquetar mis archivos como parte de este proyecto**. Luego, seleccione **Siguiente**.
 1. Seleccione **Create project** (Crear proyecto).
 
 ## Etiquetado de los datos
@@ -149,7 +149,7 @@ Cuando esté satisfecho con el entrenamiento del modelo, es el momento de implem
 
 Para probar las capacidades de clasificación de texto personalizadas del servicio Lenguaje de Azure AI, desarrollará una aplicación de consola sencilla en Visual Studio Code.
 
-> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en su entorno de desarrollo.
+> **Sugerencia**: Si ya ha clonado el repositorio **mslearn-ai-language**, ábralo en Visual Studio Code. De lo contrario, siga estos pasos para clonarlo en el entorno de desarrollo.
 
 1. Inicie Visual Studio Code.
 2. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
@@ -165,7 +165,7 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 1. En Visual Studio Code, en el panel **Explorador**, vaya a la carpeta **Labfiles/04-text-classification** y expanda la carpeta **CSharp** o **Python** según sus preferencias de lenguaje y la carpeta **classify-text** que contiene. Cada carpeta contiene los archivos específicos del lenguaje de una aplicación en la que va a integrar la funcionalidad de clasificación de texto de Lenguaje de Azure AI.
 1. Haga clic con el botón derecho en la carpeta **classify-text** que contiene los archivos de código y abra un terminal integrado. A continuación, instale el paquete del SDK de Lenguaje de Azure AI Text Analytics mediante la ejecución del comando adecuado para sus preferencias de lenguaje:
 
-    **C#:**
+    **C#**:
 
     ```
     dotnet add package Azure.AI.TextAnalytics --version 5.3.0
@@ -179,10 +179,10 @@ Se han proporcionado aplicaciones para C# y Python, así como un archivo de text
 
 1. En el panel **Explorador**, en la carpeta **classify-text**, abra el archivo de configuración para su idioma preferido.
 
-    - **C#** : appsettings.json
+    - **C#**: appsettings.json
     - **Python**: .env
     
-1. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que creó (disponible en la página **Claves y punto de conexión** del recurso de Lenguaje de Azure AI en Azure Portal). El archivo ya debe contener los nombres de proyecto e implementación del modelo de clasificación de texto.
+1. Actualice los valores de configuración para incluir el **punto de conexión** y una **clave** del recurso de Lenguaje de Azure que creó (disponible en la página **Claves y punto de conexión** del recurso de Lenguaje de Azure AI en Azure Portal) El archivo ya debe contener los nombres de proyecto e implementación del modelo de clasificación de texto.
 1. Guarde el archivo de configuración.
 
 ## Agregue código para clasificar documentos
@@ -304,11 +304,11 @@ La aplicación ya se puede probar.
     - **C#**: `dotnet run`
     - **Python**: `python classify-text.py`
 
-    > **Sugerencia**: Puede usar el icono **Maximizar el tamaño del panel **(**^**) en la barra de herramientas del terminal para ver más del texto de la consola.
+    > **Sugerencia**: Puede usar el icono **Maximizar el tamaño del panel** (**^**) en la barra de herramientas del terminal para ver más del texto de la consola.
 
 1. Observe la salida. La aplicación debe enumerar una clasificación y una puntuación de confianza para cada archivo de texto.
 
 
-## Limpieza
+## Limpiar
 
 Cuando ya no necesite el proyecto, puede eliminarlo desde la página de **proyectos** en Language Studio. También puede quitar el servicio de Lenguaje de Azure AI y la cuenta de almacenamiento asociada en [Azure Portal](https://portal.azure.com).
