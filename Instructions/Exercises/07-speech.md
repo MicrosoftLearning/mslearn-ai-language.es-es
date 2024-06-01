@@ -28,7 +28,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso de **Vo
     - **Nombre**: *escriba un nombre único*
     - **Plan de tarifa**: seleccione **F0** (*gratis*), o **S** (*estándar*) si F no está disponible.
     - **Aviso de IA responsable**: Aceptar.
-1. Seleccione **Revisar + crear**.
+1. Seleccione **Revisar y crear** y **Crear** para aprovisionar el recurso.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
 1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
 
@@ -41,6 +41,9 @@ Desarrollará la aplicación de voz mediante Visual Studio Code. Los archivos de
 1. Inicie Visual Studio Code.
 1. Abra la paleta (Mayús + Ctrl + P) y ejecute un comando **Git: Clone** para clonar el repositorio `https://github.com/MicrosoftLearning/mslearn-ai-language` en una carpeta local (no importa qué carpeta).
 1. Cuando se haya clonado el repositorio, abra la carpeta en Visual Studio Code.
+
+    > **Nota**: Si Visual Studio Code muestra un mensaje emergente para solicitarle que confíe en el código que está abriendo, haga clic en la opción **Sí, confío en los autores** en el elemento emergente.
+
 1. Espere mientras se instalan archivos adicionales para admitir los proyectos de código de C# en el repositorio.
 
     > **Nota**: Si se le pide que agregue los recursos necesarios para compilar y depurar, seleccione **Ahora no**.
