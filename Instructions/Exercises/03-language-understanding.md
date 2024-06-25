@@ -119,7 +119,7 @@ Ahora que ha agregado algunas intenciones, vamos a entrenar el modelo de lenguaj
 
 1. Seleccione la página **Rendimiento del modelo** y, luego, elija el modelo **Reloj**. Revise las métricas de evaluación generales y por intención (*precisión*, *coincidencia* y *puntuación F1*) y la *matriz de confusión* generadas por la evaluación que se realizó durante el entrenamiento. Tenga en cuenta que, debido al número reducido de expresiones de ejemplo, puede que no todas las intenciones se incluyan en los resultados.
 
-    > **NOTA**: Para obtener más información sobre las métricas de evaluación, consulte la [documentación](/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics).
+    > **NOTA**: Para obtener más información sobre las métricas de evaluación, consulte la [documentación](https://learn.microsoft.com/azure/ai-services/language-service/conversational-language-understanding/concepts/evaluation-metrics).
 
 1. Vaya a la página **Implementar un modelo**, seleccione **Agregar implementación**.
 
