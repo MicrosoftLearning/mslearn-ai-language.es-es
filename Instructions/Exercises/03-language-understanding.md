@@ -51,7 +51,7 @@ Ahora que ha creado un recurso de creación, puede usarlo para crear un proyecto
 
     Si <u>no</u> se le pide que elija un recurso de Language, puede deberse a que tiene varios recursos de Language en la suscripción, en cuyo caso:
 
-    1. En la barra de la parte superior de la página, seleccione el botón **Configuración (&#9881;)**.
+    1. En la barra de la parte superior de la página, seleccione el botón**Configuración (&#9881;)**.
     2. En la página **Configuración,** vea la pestaña **Recursos**.
     3. Seleccione el recurso de Language que acaba de crear y haga clic en **Switch resource** (Cambiar recurso).
     4. En la parte superior de la página, haga clic en **Language Studio** para volver a la página principal de Language Studio
