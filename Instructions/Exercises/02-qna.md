@@ -15,9 +15,9 @@ Uno de los escenarios de conversación más comunes es proporcionar soporte téc
 Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del **servicio de Lenguaje de Azure AI**. Además, para crear y hospedar una knowledge base para la respuesta a preguntas, debe habilitar la característica **Respuesta a preguntas**.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
-1. En el campo de búsqueda de la parte superior, escriba **Servicios de Azure AI** y presione **Entrar**.
-1. Seleccione **Crear** en el recurso **Servicio de lenguaje**, en los resultados.
-1. **Seleccione** el bloque **Personalizar respuesta a preguntas**. Después, seleccione **Continuar para crear el recurso**. Deberá especificar la siguiente configuración:
+1. Seleccione **Crear un recurso**.
+1. En el campo de búsqueda, busca **Servicio de lenguaje**. A continuación, en los resultados, seleccione **Crear** bajo **Servicio de lenguaje**.
+1. Selecciona el bloque **Personalizar respuesta a preguntas**. Después, seleccione **Continuar para crear el recurso**. Deberá especificar la siguiente configuración:
 
     - **Suscripción**: *suscripción de Azure*
     - **Grupo de recursos**: *elija o cree un grupo de recursos*.
@@ -54,7 +54,7 @@ Si quiere crear una knowledge base para responder a preguntas en el recurso de L
     4. En la parte superior de la página, haga clic en **Language Studio** para volver a la página principal de Language Studio.
 
 1. En la parte superior del portal, en el menú **Crear nuevo**, seleccione **Respuesta a preguntas personalizada**.
-1. En el asistente para ***crear un proyecto**, en la página **Elegir configuración de idioma**, seleccione la opción para **establecer el idioma de todos los proyectos de este recurso** y seleccione **Inglés** como idioma. Luego, seleccione **Siguiente**.
+1. En el asistente para ***Crear un proyecto**, en la página **Elegir configuración de idioma**, selecciona la opción para **Seleccionar el idioma de todos los proyectos** y selecciona **Inglés** como idioma. Seleccione **Siguiente**.
 1. En la página **Escribir información básica**, escriba los siguientes detalles:
     - **Nombre** `LearnFAQ`
     - **Descripción**: `FAQ for Microsoft Learn`
@@ -64,7 +64,7 @@ Si quiere crear una knowledge base para responder a preguntas en el recurso de L
 
 ## Agregar orígenes la knowledge base
 
-Puede crear una knowledge base desde cero, pero es habitual empezar importando preguntas y respuestas desde una página o documento de preguntas frecuentes existente. En este caso, importará datos desde una página web de preguntas más frecuentes existente para Microsoft Learn. También importará algunas preguntas y respuestas predefinidas de tipo charla para admitir intercambios de conversacionales comunes.
+Puede crear una knowledge base desde cero, pero es habitual empezar importando preguntas y respuestas desde una página o documento de preguntas frecuentes existente. En este caso, importarás datos desde una página web de preguntas más frecuentes existente para Microsoft Learn. También importarás algunas preguntas y respuestas predefinidas de tipo charla para admitir intercambios de conversacionales comunes.
 
 1. En la página **Administrar orígenes** del proyecto de respuesta a preguntas, en la lista **&#9547; Agregar origen**, seleccione **Direcciones URL**. A continuación, en el cuadro de diálogo **Agregar URL**, seleccione **&#9547; Agregar URL** y configure el siguiente nombre y URL antes de seleccionar **Agregar todo** para agregarla a la knowledge base:
     - **Nombre**: `Learn FAQ Page`
@@ -108,7 +108,7 @@ Ahora que ha creado una knowledge base, es el momento de probarla en Language St
 
 La knowledge base proporciona un servicio back-end que las aplicaciones cliente pueden usar para responder preguntas. Ahora ya está listo para publicar la knowledge base y acceder a su interfaz REST desde un cliente.
 
-1. En el proyecto **LearnFAQ** de Language Studio, seleccione la página **Implementar knowledge base**.
+1. En el proyecto **LearnFAQ** de Language Studio, selecciona la página **Implementar knowledge base** desde el menú de navegación de la izquierda.
 1. En la parte superior de la página, seleccione **Implementar**. A continuación, seleccione **Implementar** para confirmar que quiere implementar la knowledge base.
 1. Una vez completada la implementación, seleccione **Obtener URL de predicción** para ver el punto de conexión REST de la knowledge base y tenga en cuenta que la solicitud de ejemplo incluye parámetros para lo siguiente:
     - **projectName**: el nombre del proyecto (que debe ser *LearnFAQ*)
