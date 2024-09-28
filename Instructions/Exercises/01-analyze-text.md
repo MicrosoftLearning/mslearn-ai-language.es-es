@@ -15,7 +15,8 @@ Por ejemplo, supongamos que una agencia de viajes quiere procesar las reseñas d
 Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del servicio de **Lenguaje de Azure AI** en su suscripción de Azure.
 
 1. Inicie sesión en Azure Portal en `https://portal.azure.com` y regístrese con la cuenta de Microsoft asociada a su suscripción de Azure.
-1. En el campo de búsqueda de la parte superior, busque **Servicios de Azure AI**. A continuación, en los resultados, seleccione **Crear** bajo **Servicio de lenguaje**.
+1. Seleccione **Crear un recurso**.
+1. En el campo de búsqueda, busca **Servicio de lenguaje**. A continuación, en los resultados, seleccione **Crear** bajo **Servicio de lenguaje**.
 1. Seleccione **Continuar para crear el recurso**.
 1. Aprovisione el recurso mediante la siguiente configuración:
     - **Suscripción**: *su suscripción a Azure*.
@@ -26,7 +27,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del ser
     - **Aviso de IA responsable**: Aceptar.
 1. Seleccione **Revisar y crear** y **Crear** para aprovisionar el recurso.
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
-1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
+1. Visualiza la página **Claves y punto de conexión** en la sección **Administración de recursos**. Necesitará la información de esta página más adelante en el ejercicio.
 
 ## Preparación para desarrollar una aplicación en Visual Studio Code
 
