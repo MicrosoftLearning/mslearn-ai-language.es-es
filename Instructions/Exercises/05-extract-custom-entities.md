@@ -80,6 +80,8 @@ Ahora está listo para crear un proyecto de reconocimiento de entidades con nomb
         - **Contenedor de almacenamiento de blobs**: clasificados
         - **¿Los archivos están etiquetados con clases?**: No, necesito etiquetar mis archivos como parte de este proyecto.
 
+> **Sugerencia**: si recibes un error sobre que no estás autorizado para realizar esta operación, tendrás que agregar una asignación de roles. Para solucionarlo, agregamos el rol "Colaborador de datos de blob de almacenamiento" en la cuenta de almacenamiento para el usuario que ejecuta el laboratorio. Encontrarás más información [en la página de documentación](https://learn.microsoft.com/azure/ai-services/language-service/custom-named-entity-recognition/how-to/create-project?tabs=portal%2Clanguage-studio#enable-identity-management-for-your-resource).
+
 ## Etiquetado de los datos
 
 Ahora que se ha creado el proyecto, debe etiquetar los datos para entrenar el modelo sobre cómo identificar las entidades.

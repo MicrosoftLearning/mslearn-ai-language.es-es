@@ -91,6 +91,8 @@ Para ayudar al modelo a predecir qué intención solicita un usuario, debe etiqu
     - `what time is it?`
     - `tell me the time`
 
+    > **NOTA** Para agregar una nueva expresión, escribe la expresión en el cuadro de texto junto a la intención y presiona ENTRAR. 
+
 1. Seleccione la intención **GetDay** y agregue las siguientes expresiones como entrada de ejemplo:
     - `what day is it?`
     - `what's the day?`
@@ -193,6 +195,8 @@ En algunos casos, los valores válidos para una entidad se pueden restringir a u
     | Clave de la lista | Sinónimos|
     |-------------------|---------|
     | `Sunday` | `Sun` |
+
+    > **NOTA** Para especificar los campos de la nueva lista, inserta el valor `Sunday` en el campo de texto y, después, haz clic en el campo donde se muestra "Escriba el valor y pulse Entrar...", escribe los sinónimos y presiona ENTRAR.
 
 1. Repita el paso anterior para agregar los siguientes componentes de lista:
 
