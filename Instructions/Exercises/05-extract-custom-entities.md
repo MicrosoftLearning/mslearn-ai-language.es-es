@@ -88,7 +88,7 @@ Ahora que se ha creado el proyecto, debe etiquetar los datos para entrenar el mo
 
 1. Si la página **Etiquetado de datos** aún no está abierta, en el panel de la izquierda, seleccione **Etiquetado de datos**. Verá una lista de los archivos que ha cargado en la cuenta de almacenamiento.
 1. En el lado derecho, en el panel **Actividad**, seleccione **Agregar entidad** y agregue una nueva entidad llamada `ItemForSale`.
-1.  Repita el paso anterior para crear las entidades siguientes:
+1.  Repite el paso anterior para crear las entidades siguientes:
     - `Price`
     - `Location`
 1. Después de crear las tres entidades, seleccione **Ad 1.txt** para que pueda leerlo.
@@ -96,7 +96,7 @@ Ahora que se ha creado el proyecto, debe etiquetar los datos para entrenar el mo
     1. Resalte el texto *face cord of firewood* y seleccione la entidad **ItemForSale**.
     1. Resalte el texto *Denver, CO* y seleccione la entidad **Location**.
     1. Resalte el texto *$90* y seleccione la entidad **Price**.
-1. En el panel **Actividad**, tenga en cuenta que este documento se agregará al conjunto de datos para entrenar el modelo.
+1. En el panel **Actividad**, ten en cuenta que este documento se agregará al conjunto de datos para entrenar el modelo.
 1. Use el botón **Siguiente documento** para pasar al siguiente documento y continúe asignando texto a las entidades adecuadas para todo el conjunto de documentos, agregándolos todos al conjunto de datos de entrenamiento.
 1. Cuando haya etiquetado el último documento (*Ad 9.txt*), guarde las etiquetas.
 
