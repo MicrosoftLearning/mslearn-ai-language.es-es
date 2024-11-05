@@ -18,7 +18,18 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del ser
 1. Seleccione el botón **Crear un recurso**, busque *Lenguaje* y cree un recurso del **Servicio Language**. Cuando esté en la página *Seleccionar características adicionales*, seleccione la característica personalizada que contiene **Extracción de reconocimiento de entidades con nombre personalizado**. Cree el recurso con los valores siguientes:
     - **Suscripción**: *suscripción de Azure*
     - **Grupo de recursos**: *seleccione o cree un grupo de recursos*
-    - **Región**: *elija cualquier región disponible*
+    - **Región**: *selecciona una de las siguientes regiones*\*
+        - Este de Australia
+        - Centro de la India
+        - Este de EE. UU.
+        - Este de EE. UU. 2
+        - Norte de Europa
+        - Centro-sur de EE. UU.
+        - Norte de Suiza
+        - Sur de Reino Unido
+        - Oeste de Europa
+        - Oeste de EE. UU. 2
+        - Oeste de EE. UU. 3
     - **Nombre**: *escriba un nombre único*
     - **Plan de tarifa**: seleccione **F0** (*gratis*) o **S** (*estándar*) si F no está disponible.
     - **Cuenta de almacenamiento**: nueva cuenta de almacenamiento.:
