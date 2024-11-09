@@ -20,7 +20,18 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del ser
 1. Cree un recurso con los valores siguientes:
     - **Suscripción**: *su suscripción a Azure*.
     - **Grupo de recursos**: *seleccione o cree un grupo de recursos*.
-    - **Región**: *elija cualquier región disponible*:
+    - **Región**: *selecciona una de las siguientes regiones*\*
+        - Este de Australia
+        - Centro de la India
+        - Este de EE. UU.
+        - Este de EE. UU. 2
+        - Norte de Europa
+        - Centro-sur de EE. UU.
+        - Norte de Suiza
+        - Sur de Reino Unido
+        - Oeste de Europa
+        - Oeste de EE. UU. 2
+        - Oeste de EE. UU. 3
     - **Nombre**: *escriba un nombre único*.
     - **Plan de tarifa**: seleccione **F0** (*gratis*), o **S** (*estándar*) si F no está disponible.
     - **Cuenta de almacenamiento**: nueva cuenta de almacenamiento.
