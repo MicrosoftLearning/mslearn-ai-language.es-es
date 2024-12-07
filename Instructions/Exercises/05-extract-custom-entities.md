@@ -41,6 +41,16 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del ser
 1. Espere a que se complete la implementación y, a continuación, vaya al recurso implementado.
 1. Consulte la página **Claves y punto de conexión**. Necesitará la información de esta página más adelante en el ejercicio.
 
+## Roles para el usuario
+> **NOTA**: si omites este paso, obtendrás el error 403 al intentar conectarte a tu proyecto personalizado. Es importante que tu usuario actual tenga este rol para acceder a los datos del blob de la cuenta de almacenamiento, incluso si eres el propietario de la cuenta de almacenamiento.**
+
+1. Vaya a la página de la cuenta de almacenamiento en Azure Portal.
+2. Seleccione **Control de acceso (IAM)** en el menú de navegación izquierdo.
+3. Selecciona **Agregar** para Agregar asignaciones de roles y elige el rol **colaborador de datos de blob de almacenamiento** en la cuenta de almacenamiento.
+4. En **Asignar acceso a**, seleccione **Usuario, grupo o entidad de servicio**.
+5. Elija **Seleccionar miembros**.
+6. Seleccione su usuario. Puede buscar por nombres de usuario en el campo **Seleccionar**.
+
 ## Carga de anuncios de ejemplo
 
 Una vez que haya creado el servicio de Lenguaje de Azure AI y la cuenta de almacenamiento, tendrá que cargar anuncios de ejemplo para entrenar el modelo más adelante.
