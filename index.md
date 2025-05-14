@@ -12,7 +12,7 @@ Los siguientes ejercicios han sido diseñados para brindarte una experiencia pr�
 
 ## Ejercicios
 
-{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Exercises'" %} {% for activity in labs  %}
+{% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %} {% for activity in labs  %}
 <hr>
 ### [{{ activity.lab.title }}]({{ site.github.url }}{{ activity.url }})
 
