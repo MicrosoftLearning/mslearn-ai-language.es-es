@@ -227,7 +227,7 @@ Si ha terminado de explorar el servicio Voz de Azure AI, puede eliminar los recu
 
 ## ¿Qué ocurre si tienes un micrófono y un altavoz?
 
-En este ejercicio, usarás un archivo de audio como entrada de voz. Veamos cómo se puede modificar el código para usar hardware de audio.
+En este ejercicio, el entorno de Azure Cloud Shell que usamos no admite hardware de audio, por lo que ha usado archivos de audio para la entrada y la salida de voz. Veamos cómo se puede modificar el código para usar hardware de audio si lo tiene.
 
 ### Uso de la traducción de voz con un micrófono
 
@@ -258,7 +258,7 @@ En este ejercicio, usarás un archivo de audio como entrada de voz. Veamos cómo
             "hi": "hi-IN-MadhurNeural"
    }
    speech_config.speech_synthesis_voice_name = voices.get(targetLanguage)
-   audio_config_out = speech_sdk.audio.AudioConfig(use_default_speaker=True)
+   audio_config_out = speech_sdk.audio.AudioOutputConfig(use_default_speaker=True)
    speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config, audio_config_out)
    speak = speech_synthesizer.speak_text_async(translation).get()
    if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:

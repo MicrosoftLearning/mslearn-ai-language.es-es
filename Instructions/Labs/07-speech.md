@@ -243,9 +243,17 @@ El lenguaje de marcado de síntesis de voz (SSML) permite personalizar la forma 
     
     <video controls src="https://github.com/MicrosoftLearning/mslearn-ai-language/raw/refs/heads/main/Instructions/media/Output2.mp4" title="La hora es 5:30. Es hora de finalizar este laboratorio." width="150"></video>
 
-## (OPCIONAL) ¿Qué ocurre si tiene un micrófono y un altavoz?
+## Limpieza
 
-En este ejercicio, usarás un archivo de audio como entrada de voz. Veamos cómo se puede modificar el código para usar hardware de audio.
+Si has terminado de explorar Voz de Azure AI, debes eliminar los recursos que has creado en este ejercicio para evitar incurrir en costes innecesarios de Azure.
+
+1. Cierre del panel de Azure Cloud Shell
+1. En Azure Portal, vaya al recurso de Voz de Azure AI que creó en este laboratorio.
+1. En la página del recurso, seleccione **Eliminar** y siga las instrucciones para eliminar el recurso.
+
+## ¿Qué ocurre si tienes un micrófono y un altavoz?
+
+En este ejercicio, el entorno de Azure Cloud Shell que usamos no admite hardware de audio, por lo que ha usado archivos de audio para la entrada y la salida de voz. Veamos cómo se puede modificar el código para usar hardware de audio si lo tiene.
 
 ### Uso del reconocimiento de voz con un micrófono
 
@@ -292,14 +300,6 @@ if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
 ```
 
 > **Nota**: El altavoz predeterminado del sistema es la salida de audio predeterminada, por lo que también podrías omitir audioConfig en conjunto.
-
-## Limpieza
-
-Si has terminado de explorar Voz de Azure AI, debes eliminar los recursos que has creado en este ejercicio para evitar incurrir en costes innecesarios de Azure.
-
-1. Cierre del panel de Azure Cloud Shell
-1. En Azure Portal, vaya al recurso de Voz de Azure AI que creó en este laboratorio.
-1. En la página del recurso, seleccione **Eliminar** y siga las instrucciones para eliminar el recurso.
 
 ## Más información
 
