@@ -248,7 +248,7 @@ Solo hay dos valores que debe cambiar en la parte superior del script de impleme
 1. Ejecute los comandos siguientes en Cloud Shell para empezar a editar el script de implementación.
 
     ```bash
-    cd ~/voice-live-web
+    cd ~/01-voice-live-web
     ```
     
     ```bash
