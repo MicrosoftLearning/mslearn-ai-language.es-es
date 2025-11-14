@@ -44,7 +44,7 @@ Si aún no tiene uno en su suscripción, deberá aprovisionar un recurso del **s
 
 ## Creación de un proyecto de respuesta a preguntas
 
-Si quiere crear una knowledge base para responder a preguntas en el recurso de Lenguaje de Azure AI, puede usar el portal Language Studio para crear un proyecto de respuesta a preguntas. En este caso, creará una knowledge base que contiene preguntas y respuestas sobre [Microsoft Learn](https://docs.microsoft.com/learn).
+Si quiere crear una knowledge base para responder a preguntas en el recurso de Lenguaje de Azure AI, puede usar el portal Language Studio para crear un proyecto de respuesta a preguntas. En este caso, creará una knowledge base que contiene preguntas y respuestas sobre [Microsoft Learn](https://learn.microsoft.com/training/).
 
 1. En una pestaña nueva del explorador, vaya el portal de Language Studio en [https://language.cognitive.azure.com/](https://language.cognitive.azure.com/) e inicie sesión con la cuenta de Microsoft asociada a su suscripción de Azure.
 1. Si se le pide que elija un recurso de Language, seleccione la siguiente configuración:
@@ -75,7 +75,7 @@ Puede crear una knowledge base desde cero, pero es habitual empezar importando p
 
 1. En la página **Administrar orígenes** del proyecto de respuesta a preguntas, en la lista **&#9547; Agregar origen**, seleccione **Direcciones URL**. A continuación, en el cuadro de diálogo **Agregar URL**, seleccione **&#9547; Agregar URL** y configure el siguiente nombre y URL antes de seleccionar **Agregar todo** para agregarla a la knowledge base:
     - **Nombre**: `Learn FAQ Page`
-    - **URL**: `https://docs.microsoft.com/en-us/learn/support/faq`
+    - **URL**: `https://learn.microsoft.com/en-us/training/support/faq?pivots=general`
 1. En la página **Administrar orígenes** del proyecto de respuesta a preguntas, en la lista **&#9547; Agregar origen**, seleccione **Charla**. En el cuadro de diálogo **Agregar charla**, seleccione **Amistosa** y seleccione **Agregar charla**.
 
 ## Edición de la base de conocimiento
@@ -84,18 +84,18 @@ La knowledge base se ha rellenado con pares de preguntas y respuestas de las pre
 
 1. En el proyecto **LearnFAQ** de Language Studio, seleccione la página **Editar knowledge base** para ver los pares de pregunta y respuesta existentes. (si se muestran algunas sugerencias, léalas y elija **Entendido** para descartarlas, o seleccione **Omitir todo**)
 1. En la knowledge base, en la pestaña **Pares de preguntas y respuestas**, seleccione **&#65291;** y cree un nuevo par de pregunta y respuesta con la siguiente configuración:
-    - **Origen**: `https://docs.microsoft.com/en-us/learn/support/faq`
-    - **Pregunta**: `What are Microsoft credentials?`
-    - **Respuesta**: `Microsoft credentials enable you to validate and prove your skills with Microsoft technologies.`
-1. Seleccione **Listo**.
-1. En la página de la pregunta **¿Qué son las credenciales de Microsoft?** que se crea, expanda **Preguntas alternativas**. A continuación, agregue la pregunta alternativa `How can I demonstrate my Microsoft technology skills?`.
+    - **Origen**: `https://learn.microsoft.com/en-us/training/support/faq?pivots=general`
+    - **Pregunta**: `What are the different types of modules on Microsoft Learn?`
+    - **Respuesta**: `Microsoft Learn offers various types of training modules, including role-based learning paths, product-specific modules, and hands-on labs. Each module contains units with lessons and knowledge checks to help you learn at your own pace.`
+1. Selecciona **Listo.**
+1. En la página de la pregunta **¿Cuáles son los distintos tipos de módulos de Microsoft Learn?** que se crea, expanda la sección **Preguntas alternativas**. A continuación, agregue la pregunta alternativa `How are training modules organized?`.
 
     En algunos casos, tiene sentido permitir que el usuario realice un seguimiento de la respuesta mediante la creación de una conversación *multiturno* que permita al usuario refinar iterativamente la pregunta para llegar a la respuesta que necesita.
 
-1. En la respuesta que escribió para la pregunta sobre certificación, expanda **Solicitudes de seguimiento** y agregue la siguiente solicitud de seguimiento:
-    - **Texto que se muestra en el símbolo del sistema al usuario**: `Learn more about credentials`.
-    - Seleccione la pestaña **Crear vínculo a nuevo par** y escriba este texto: `You can learn more about credentials on the [Microsoft credentials page](https://docs.microsoft.com/learn/credentials/).`
-    - Seleccione **Mostrar solo en el flujo contextual**. Esta opción garantiza que la respuesta solo se devuelve en el contexto de una pregunta de seguimiento a partir de la pregunta de certificación original.
+1. En la respuesta especificada para la pregunta de los tipos de módulos, expanda **Solicitudes de seguimiento** y agregue la siguiente solicitud de seguimiento:
+    - **Texto que se muestra en el símbolo del sistema al usuario**: `Learn more about training`.
+    - Seleccione la pestaña **Crear vínculo a nuevo par** y escriba este texto: `You can explore modules and learning paths on the [Microsoft Learn training page](https://learn.microsoft.com/training/).`
+    - Seleccione **Mostrar solo en el flujo contextual**. Esta opción garantiza que la respuesta solo se devuelva en el contexto de una pregunta de seguimiento de la pregunta original de los tipos de módulos.
 1. Seleccione **Agregar consulta**.
 
 ## Entrenamiento y prueba de la knowledge base
@@ -107,8 +107,8 @@ Ahora que ha creado una knowledge base, es el momento de probarla en Language St
 1. En el panel de pruebas, en la parte superior, anule la selección de **Incluir respuesta corta** (si aún no se ha anulado la selección). A continuación, en la parte inferior, escriba el mensaje `Hello`. Debería devolver una respuesta adecuada.
 1. En el panel de prueba, en la parte inferior, escriba el mensaje `What is Microsoft Learn?`. Se debe devolver una respuesta adecuada de las preguntas más frecuentes.
 1. Escriba el mensaje `Thanks!`. Debería devolverse una respuesta de charla adecuada.
-1. Escriba el mensaje `Tell me about Microsoft credentials`. Debería devolverse la respuesta que creó junto con un vínculo de solicitud de seguimiento.
-1. Seleccione el vínculo de seguimiento **Más información sobre las credenciales**. Debería devolverse la respuesta de seguimiento con un vínculo a la página de certificación.
+1. Escriba el mensaje `What are the different types of modules on Microsoft Learn?`. Debería devolverse la respuesta que creó junto con un vínculo de solicitud de seguimiento.
+1. Seleccione el vínculo de seguimiento **Más información sobre el entrenamiento**. Se devolverá la respuesta de seguimiento con un vínculo a la página de entrenamiento.
 1. Cuando haya terminado de probar la knowledge base, cierre el panel de prueba.
 
 ## Implementar la knowledge base
